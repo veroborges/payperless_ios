@@ -9,11 +9,17 @@
 /* Begin PBXBuildFile section */
 		75664B9E1A055EF200C85099 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75664B9D1A055EF200C85099 /* AppDelegate.swift */; };
 		75664BA11A055EF200C85099 /* Payperless.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 75664B9F1A055EF200C85099 /* Payperless.xcdatamodeld */; };
-		75664BA31A055EF200C85099 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75664BA21A055EF200C85099 /* ViewController.swift */; };
 		75664BA61A055EF200C85099 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75664BA41A055EF200C85099 /* Main.storyboard */; };
 		75664BA81A055EF200C85099 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75664BA71A055EF200C85099 /* Images.xcassets */; };
 		75664BAB1A055EF200C85099 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75664BA91A055EF200C85099 /* LaunchScreen.xib */; };
 		75664BB71A055EF300C85099 /* PayperlessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75664BB61A055EF300C85099 /* PayperlessTests.swift */; };
+		756CEF2A1A0567F2005B71B7 /* PayperlessAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756CEF291A0567F2005B71B7 /* PayperlessAPI.swift */; };
+		756CEF2C1A0580D4005B71B7 /* PayProcess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756CEF2B1A0580D4005B71B7 /* PayProcess.swift */; };
+		756CEF331A0584FC005B71B7 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756CEF2E1A0584FC005B71B7 /* BlurView.swift */; };
+		756CEF341A0584FC005B71B7 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756CEF2F1A0584FC005B71B7 /* Data.swift */; };
+		756CEF351A0584FC005B71B7 /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756CEF301A0584FC005B71B7 /* DesignableView.swift */; };
+		756CEF361A0584FC005B71B7 /* Misc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756CEF311A0584FC005B71B7 /* Misc.swift */; };
+		756CEF371A0584FC005B71B7 /* SpringAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756CEF321A0584FC005B71B7 /* SpringAnimation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,13 +37,19 @@
 		75664B9C1A055EF200C85099 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75664B9D1A055EF200C85099 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		75664BA01A055EF200C85099 /* Payperless.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Payperless.xcdatamodel; sourceTree = "<group>"; };
-		75664BA21A055EF200C85099 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		75664BA51A055EF200C85099 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		75664BA71A055EF200C85099 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		75664BAA1A055EF200C85099 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		75664BB01A055EF200C85099 /* PayperlessTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PayperlessTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		75664BB51A055EF200C85099 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75664BB61A055EF300C85099 /* PayperlessTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayperlessTests.swift; sourceTree = "<group>"; };
+		756CEF291A0567F2005B71B7 /* PayperlessAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PayperlessAPI.swift; sourceTree = "<group>"; };
+		756CEF2B1A0580D4005B71B7 /* PayProcess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PayProcess.swift; sourceTree = "<group>"; };
+		756CEF2E1A0584FC005B71B7 /* BlurView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
+		756CEF2F1A0584FC005B71B7 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		756CEF301A0584FC005B71B7 /* DesignableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
+		756CEF311A0584FC005B71B7 /* Misc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Misc.swift; sourceTree = "<group>"; };
+		756CEF321A0584FC005B71B7 /* SpringAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringAnimation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +73,7 @@
 		75664B8F1A055EF200C85099 = {
 			isa = PBXGroup;
 			children = (
+				756CEF2D1A0584FC005B71B7 /* Spring */,
 				75664B9A1A055EF200C85099 /* Payperless */,
 				75664BB31A055EF200C85099 /* PayperlessTests */,
 				75664B991A055EF200C85099 /* Products */,
@@ -80,12 +93,13 @@
 			isa = PBXGroup;
 			children = (
 				75664B9D1A055EF200C85099 /* AppDelegate.swift */,
-				75664BA21A055EF200C85099 /* ViewController.swift */,
 				75664BA41A055EF200C85099 /* Main.storyboard */,
 				75664BA71A055EF200C85099 /* Images.xcassets */,
 				75664BA91A055EF200C85099 /* LaunchScreen.xib */,
 				75664B9F1A055EF200C85099 /* Payperless.xcdatamodeld */,
 				75664B9B1A055EF200C85099 /* Supporting Files */,
+				756CEF291A0567F2005B71B7 /* PayperlessAPI.swift */,
+				756CEF2B1A0580D4005B71B7 /* PayProcess.swift */,
 			);
 			path = Payperless;
 			sourceTree = "<group>";
@@ -113,6 +127,18 @@
 				75664BB51A055EF200C85099 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		756CEF2D1A0584FC005B71B7 /* Spring */ = {
+			isa = PBXGroup;
+			children = (
+				756CEF2E1A0584FC005B71B7 /* BlurView.swift */,
+				756CEF2F1A0584FC005B71B7 /* Data.swift */,
+				756CEF301A0584FC005B71B7 /* DesignableView.swift */,
+				756CEF311A0584FC005B71B7 /* Misc.swift */,
+				756CEF321A0584FC005B71B7 /* SpringAnimation.swift */,
+			);
+			path = Spring;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,6 +190,7 @@
 				TargetAttributes = {
 					75664B971A055EF200C85099 = {
 						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = 5S55D8N6HT;
 					};
 					75664BAF1A055EF200C85099 = {
 						CreatedOnToolsVersion = 6.1;
@@ -215,7 +242,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75664BA31A055EF200C85099 /* ViewController.swift in Sources */,
+				756CEF2A1A0567F2005B71B7 /* PayperlessAPI.swift in Sources */,
+				756CEF361A0584FC005B71B7 /* Misc.swift in Sources */,
+				756CEF341A0584FC005B71B7 /* Data.swift in Sources */,
+				756CEF2C1A0580D4005B71B7 /* PayProcess.swift in Sources */,
+				756CEF331A0584FC005B71B7 /* BlurView.swift in Sources */,
+				756CEF351A0584FC005B71B7 /* DesignableView.swift in Sources */,
+				756CEF371A0584FC005B71B7 /* SpringAnimation.swift in Sources */,
 				75664B9E1A055EF200C85099 /* AppDelegate.swift in Sources */,
 				75664BA11A055EF200C85099 /* Payperless.xcdatamodeld in Sources */,
 			);
@@ -340,9 +373,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Payperless/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -350,9 +386,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Payperless/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -409,6 +448,7 @@
 				75664BBC1A055EF300C85099 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		75664BBD1A055EF300C85099 /* Build configuration list for PBXNativeTarget "PayperlessTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +457,7 @@
 				75664BBF1A055EF300C85099 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
