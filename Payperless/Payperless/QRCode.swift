@@ -12,12 +12,14 @@ class QRCode: UIViewController {
     
     @IBOutlet weak var qrCodeImage: UIImageView!
     
+    @IBOutlet weak var backgroundMaskView: UIView!
     var cardNumber : String = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        insertBlurView(backgroundMaskView, UIBlurEffectStyle.Light)
         
         var qrCode = createQRForString(cardNumber)
         qrCodeImage.image = createNonInterpolatedUIImageFromCIImage(qrCode, scale:2*UIScreen.mainScreen().scale)

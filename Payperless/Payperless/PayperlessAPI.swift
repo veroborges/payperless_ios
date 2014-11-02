@@ -48,7 +48,6 @@ class PayperlessAPI: NSObject {
         }
         
     }
-
     
     /*****
     # GET /api/get_all_transactions
@@ -61,9 +60,6 @@ class PayperlessAPI: NSObject {
         let params = "user_id=\(userID)"
         HTTPGetJSON("/api/get_all_transactions", dataString: params, callback)
     }
-    
-    
-    
     
     /** HELPER FUNCTIONS FOR POST/GET ***/
     

@@ -13,7 +13,10 @@ class PayProcess: UIViewController {
     
     @IBOutlet weak var merchantHeaderImg: UIImageView!
     @IBOutlet weak var numberPadView: UIView!
+    @IBOutlet weak var headerMask: UIView!
+    @IBOutlet weak var backgroundMaskView: UIView!
     
+    @IBOutlet weak var greenContainer: UIView!
     @IBOutlet weak var dollarLabel: UILabel!
     @IBOutlet weak var amountLabelInit: UILabel!
     
@@ -94,13 +97,13 @@ class PayProcess: UIViewController {
     
     func addNewLabel(title:NSString){
         var lastFrame = listOFLabels.last!.frame
-        let label = UILabel(frame: CGRectMake(lastFrame.origin.x + lastFrame.size.width/2 , 239, 22, 45))
+        let label = UILabel(frame: CGRectMake(lastFrame.origin.x + lastFrame.size.width/2 , 110, 22, 45))
         label.textAlignment = NSTextAlignment.Center
         label.text = title
         label.font = UIFont (name: "Helvetica-Bold", size: 39)
         label.textColor = UIColor.whiteColor()
         label.alpha = 0
-        self.view.addSubview(label)
+        self.greenContainer.addSubview(label)
         
         spring(0.5, {
             self.animateNewCharacter(label)
@@ -176,6 +179,7 @@ class PayProcess: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        insertBlurView(backgroundMaskView, UIBlurEffectStyle.Light)
         listOFLabels.append(dollarLabel)
         // Do any additional setup after loading the view, typically from a nib.
     }
