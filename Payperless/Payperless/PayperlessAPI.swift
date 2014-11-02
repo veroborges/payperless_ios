@@ -7,7 +7,7 @@
 //
 
 import Foundation
-var host = "http://localhost:3000"
+var host = "http://www.weyenot.com/payperless"
 
 class PayperlessAPI: NSObject {
 
@@ -15,7 +15,7 @@ class PayperlessAPI: NSObject {
     
     
     /*****
-    # POST /api/issue_store_card
+    # GET /api/issue_store_card
     # params:
     # 	amount
     # 	merchantId
@@ -25,10 +25,10 @@ class PayperlessAPI: NSObject {
     ****/
     class func issueStoreCard(amount:String, merchantID:String, userID:String, callback:(NSDictionary) -> Void){
         let params = "merchant_id=\(merchantID)&amount=\(amount)&user_id=\(userID)"
-        HTTPPostJSON("/api/issue_store_card", dataString: params) {
+        HTTPGetJSON("/issue_store_card", dataString: params) {
             (result) -> Void in
-                //callback(result)
-            callback(["card_number":"6050110010032766608","balance":"10.00"])
+            callback(result)
+            //callback()
         }
     }
 
@@ -41,7 +41,7 @@ class PayperlessAPI: NSObject {
     ****/
     class func checkCardBalance(cardID:String, callback:(NSDictionary) -> Void) {
         let params = "card_id=\(cardID)"
-        HTTPGetJSON("/api/check_card_balance", dataString: params) {
+        HTTPGetJSON("/check_card_balance", dataString: params) {
             (result) -> Void in
             //callback(result)
             callback(["card_number":"6050110010032766608","balance":"10.00"])

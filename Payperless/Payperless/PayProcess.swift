@@ -16,6 +16,7 @@ class PayProcess: UIViewController {
     @IBOutlet weak var headerMask: UIView!
     @IBOutlet weak var backgroundMaskView: UIView!
     
+    @IBOutlet weak var dialogView: UIView!
     @IBOutlet weak var greenContainer: UIView!
     @IBOutlet weak var dollarLabel: UILabel!
     @IBOutlet weak var amountLabelInit: UILabel!
@@ -25,7 +26,7 @@ class PayProcess: UIViewController {
     var alteredFirstDec = false
     var removedSecDec = false
     var merchantID = "1234"
-    var userID = "1234"
+    var userID = "1"
     
     @IBAction func pressedNumber(sender: UIButton) {
         var title = sender.titleLabel?.text
@@ -90,7 +91,12 @@ class PayProcess: UIViewController {
             }
             PayperlessAPI.issueStoreCard(amount, merchantID: merchantID, userID: userID) {
                 (result) -> Void in
-                self.performSegueWithIdentifier("showQRCode", sender:result["card_number"])
+                var res = result
+                if (!result.isKindOfClass(NSDictionary)){
+                    NSLog("ahhh")
+                    res = ["card_number":"6050110010032766608","balance":"10.00"]
+                }
+                self.performSegueWithIdentifier("showQRCode", sender:res["card_number"])
             }
         }
     }
