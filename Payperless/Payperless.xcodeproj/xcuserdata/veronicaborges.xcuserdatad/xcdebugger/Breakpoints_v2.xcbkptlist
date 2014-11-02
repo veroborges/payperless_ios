@@ -112,7 +112,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Payperless/PayProcess.swift"
-            timestampString = "436608331.158869"
+            timestampString = "436612549.022789"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "224"
@@ -222,11 +222,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Payperless/PayProcess.swift"
-            timestampString = "436608331.158869"
+            timestampString = "436612354.925865"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "105"
-            endingLineNumber = "105"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
             landmarkName = "processPayment(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -270,11 +270,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Payperless/PayProcess.swift"
-            timestampString = "436608331.158869"
+            timestampString = "436612354.925865"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "97"
-            endingLineNumber = "97"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
             landmarkName = "processPayment(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -286,12 +286,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Payperless/PayProcess.swift"
-            timestampString = "436608331.158869"
+            timestampString = "436612354.925865"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "129"
-            endingLineNumber = "129"
-            landmarkName = "animateProcessing()"
+            startingLineNumber = "128"
+            endingLineNumber = "128"
+            landmarkName = "animateProcessing(_:)"
             landmarkType = "5">
             <Locations>
                <Location
@@ -332,12 +332,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Payperless/PayProcess.swift"
-            timestampString = "436608331.158869"
+            timestampString = "436612354.925865"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "129"
+            endingLineNumber = "129"
+            landmarkName = "animateProcessing(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Payperless/PayProcess.swift"
+            timestampString = "436612354.925865"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "130"
             endingLineNumber = "130"
-            landmarkName = "animateProcessing()"
+            landmarkName = "animateProcessing(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -348,12 +364,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Payperless/PayProcess.swift"
-            timestampString = "436608331.158869"
+            timestampString = "436612354.925865"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "131"
-            endingLineNumber = "131"
-            landmarkName = "animateProcessing()"
+            startingLineNumber = "136"
+            endingLineNumber = "136"
+            landmarkName = "animateProcessing(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -364,12 +380,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Payperless/PayProcess.swift"
-            timestampString = "436608331.158869"
+            timestampString = "436612354.925865"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "137"
-            endingLineNumber = "137"
-            landmarkName = "animateProcessing()"
+            startingLineNumber = "123"
+            endingLineNumber = "123"
+            landmarkName = "animateProcessing(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -380,44 +396,44 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Payperless/PayProcess.swift"
-            timestampString = "436608331.158869"
+            timestampString = "436612354.925865"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "124"
-            endingLineNumber = "124"
-            landmarkName = "animateProcessing()"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Payperless/PayProcess.swift"
-            timestampString = "436608331.158869"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "141"
-            endingLineNumber = "141"
-            landmarkName = "animateProcessing()"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Payperless/PayProcess.swift"
-            timestampString = "436608331.158869"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "110"
-            endingLineNumber = "110"
+            startingLineNumber = "109"
+            endingLineNumber = "109"
             landmarkName = "processPayment(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Payperless/QRCode.swift"
+            timestampString = "436613565.843364"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "spinDialog()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Payperless/QRCode.swift"
+            timestampString = "436614200.198678"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
+            landmarkName = "spinDialog()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

@@ -31,8 +31,9 @@ class PayProcess: UIViewController {
     var removedSecDec = false
     var merchantID = "1234"
     var userID = "1"
-    var amount = ""
     var cardNumber = ""
+    var issueCardDone = false
+    var dialogAnimationDone = false
     
     @IBAction func pressedNumber(sender: UIButton) {
         var title = sender.titleLabel?.text
@@ -95,24 +96,26 @@ class PayProcess: UIViewController {
     
     func processPayment(success:Bool){
         if (success){
-            amount = ""
+            var amount = ""
             for label in listOFLabels {
                 if (label.text != "$"){
                     amount += label.text!
                 }
             }
             
-            animateProcessing()
+            animateProcessing(amount)
 
             PayperlessAPI.issueStoreCard(amount, merchantID: merchantID, userID: userID) {
                 (results) -> Void in
                     self.cardNumber = results["card_number"] as String!
+                    self.issueCardDone = true
+                    self.checkIfDone()
             }
         }
     }
     
 
-    func animateProcessing(){
+    func animateProcessing(amount:String){
         for label in listOFLabels {
             if (label.text != "$"){
                 label.removeFromSuperview()
@@ -120,9 +123,9 @@ class PayProcess: UIViewController {
         }
         
         dollarLabel.text = "$" + amount
-        dollarLabel.frame = CGRectMake(0, 110, 323, 45)
+        dollarLabel.frame = CGRectMake(0, 110, 323, 58)
         amountLabel.text = "Amount"
-        amountLabel.frame = CGRectMake(0, 25, 323, 21)
+        amountLabel.frame = CGRectMake(0, 25, 323, 25)
         self.processingLabel.transform = CGAffineTransformConcat(CGAffineTransformMakeScale(0.5, 0.5), CGAffineTransformMakeTranslation(0, -100))
         self.processingLabel.alpha = 0
         
@@ -136,11 +139,18 @@ class PayProcess: UIViewController {
             self.processingLabel.hidden = false
             self.processingLabel.alpha = 1
             
-            self.dollarLabel.transform = CGAffineTransformMakeScale(2.1, 2.1)
+            self.dollarLabel.font = UIFont(name: "Helvetica-Bold", size: 60)
+            self.dollarLabel.transform = CGAffineTransformMakeTranslation(0, -20)
             self.processingLabel.transform = CGAffineTransformConcat(CGAffineTransformMakeScale(1, 1), CGAffineTransformMakeTranslation(0, 0))
         }, { (Bool) -> Void in
-            self.performSegueWithIdentifier("showQRCode", sender:self.cardNumber)
+            self.dialogAnimationDone = true
+            self.checkIfDone()
         })
+    }
+    
+    func checkIfDone(){
+        if (self.dialogAnimationDone && self.issueCardDone)
+            self.performSegueWithIdentifier("showQRCode", sender:amount)
     }
     
     func addNewLabel(title:NSString){
@@ -180,7 +190,6 @@ class PayProcess: UIViewController {
             }
             
             if (isDecimal && !alteredFirstDec && listOFLabels[listOFLabels.count-2].text == "0"  && listOFLabels[listOFLabels.count-1].text == "0"){
-                    NSLog("in here")
                   listOFLabels.removeLast()
                   listOFLabels.removeLast()
                 
@@ -221,14 +230,15 @@ class PayProcess: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "showQRCode") {
             var qrVC = segue.destinationViewController as QRCode;
-            qrVC.cardNumber = sender as String!
+            qrVC.cardNumber = self.cardNumber
+            qrVC.amount = sender as String!
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        insertBlurView(backgroundMaskView, UIBlurEffectStyle.Light)
+        insertBlurView(backgroundMaskView, UIBlurEffectStyle.Dark)
         listOFLabels.append(dollarLabel)
     }
 
