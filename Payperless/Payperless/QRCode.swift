@@ -30,15 +30,17 @@ class QRCode: UIViewController {
         insertBlurView(backgroundMaskView, UIBlurEffectStyle.Dark)
         self.dialogView.layer.cornerRadius = 5
         let queue = NSOperationQueue()
-        
+        self.amountLabel.text = "$" + self.amount
+        animator = UIDynamicAnimator(referenceView: view)
+
         queue.addOperationWithBlock() {
             // do something in the background
             var qrCode = self.createQRForString(self.cardNumber)
             self.qrCodeImage.image = self.createNonInterpolatedUIImageFromCIImage(qrCode, scale:UIScreen.mainScreen().scale)
-            self.amountLabel.text = "$" + self.amount
             NSOperationQueue.mainQueue().addOperationWithBlock() {
                 NSLog("Done")
                 self.done = true
+                self.panRecognizer.enabled = true
             }
         }
         
@@ -81,8 +83,10 @@ class QRCode: UIViewController {
                     
                     springComplete(0.4, { () -> Void in
                         self.processingLabel.alpha = 0
-                        self.processingLabel.text = "Place the QR code in front of the reader. Slide down when done"
+                        self.processingLabel.text = "Place the QR code in front of the reader. Slide up when done"
                         self.processingLabel.alpha = 1
+                        },{ (success) -> Void in
+                            
                     })
                     
                     
@@ -129,6 +133,54 @@ class QRCode: UIViewController {
         
         return scaledImage;
     }
-
+    
+    var animator : UIDynamicAnimator!
+    var attachmentBehavior : UIAttachmentBehavior!
+    var gravityBehaviour : UIGravityBehavior!
+    var snapBehavior : UISnapBehavior!
+    
+    @IBOutlet var panRecognizer: UIPanGestureRecognizer!
+    @IBAction func handleGesture(sender: AnyObject) {
+        if (done){
+            let myView = dialogView
+            let location = sender.locationInView(view)
+            let boxLocation = sender.locationInView(dialogView)
+            
+            if sender.state == UIGestureRecognizerState.Began {
+                animator.removeBehavior(snapBehavior)
+                
+                let centerOffset = UIOffsetMake(boxLocation.x - CGRectGetMidX(myView.bounds), boxLocation.y - CGRectGetMidY(myView.bounds));
+                attachmentBehavior = UIAttachmentBehavior(item: myView, offsetFromCenter: centerOffset, attachedToAnchor: location)
+                attachmentBehavior.frequency = 0
+                
+                animator.addBehavior(attachmentBehavior)
+            }
+            else if sender.state == UIGestureRecognizerState.Changed {
+                attachmentBehavior.anchorPoint = location
+            }
+            else if sender.state == UIGestureRecognizerState.Ended {
+                animator.removeBehavior(attachmentBehavior)
+                
+                snapBehavior = UISnapBehavior(item: myView, snapToPoint: view.center)
+                animator.addBehavior(snapBehavior)
+                
+                let translation = sender.translationInView(view)
+                if translation.y < 75 {
+                    animator.removeAllBehaviors()
+                    
+                    var gravity = UIGravityBehavior(items: [dialogView])
+                    gravity.gravityDirection = CGVectorMake(0, -10)
+                    animator.addBehavior(gravity)
+                    
+                    delay(0.5){
+                        spring(0.5, {
+                            self.processingLabel.transform = CGAffineTransformMakeTranslation(0, -600)
+                        })
+                    }
+                    
+                }
+            }
+        }
+    }
 
 }

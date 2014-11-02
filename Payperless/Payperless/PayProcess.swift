@@ -109,7 +109,7 @@ class PayProcess: UIViewController {
                 (results) -> Void in
                     self.cardNumber = results["card_number"] as String!
                     self.issueCardDone = true
-                    self.checkIfDone()
+                    self.checkIfDone(amount)
             }
         }
     }
@@ -144,13 +144,14 @@ class PayProcess: UIViewController {
             self.processingLabel.transform = CGAffineTransformConcat(CGAffineTransformMakeScale(1, 1), CGAffineTransformMakeTranslation(0, 0))
         }, { (Bool) -> Void in
             self.dialogAnimationDone = true
-            self.checkIfDone()
+            self.checkIfDone(amount)
         })
     }
     
-    func checkIfDone(){
-        if (self.dialogAnimationDone && self.issueCardDone)
+    func checkIfDone(amount:String){
+//        if (self.dialogAnimationDone && self.issueCardDone){
             self.performSegueWithIdentifier("showQRCode", sender:amount)
+//        }
     }
     
     func addNewLabel(title:NSString){
