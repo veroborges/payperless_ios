@@ -174,7 +174,8 @@ class QRCode: UIViewController {
                     
                     delay(0.5){
                         spring(0.5, {
-                            self.processingLabel.transform = CGAffineTransformMakeTranslation(0, -600)
+                            self.processingLabel.text = "Congrats! You're transaction is complete"
+                            self.processingLabel.transform = CGAffineTransformMakeTranslation(0, -500)
                         })
                     }
                     

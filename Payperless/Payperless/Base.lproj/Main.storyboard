@@ -383,6 +383,11 @@
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.57000000000000006" colorSpace="calibratedRGB"/>
                             </view>
+                            <view contentMode="scaleToFill" id="hIJ-Rf-ZpZ">
+                                <rect key="frame" x="26" y="168" width="323" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
