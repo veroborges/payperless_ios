@@ -16,11 +16,18 @@
                                 <rect key="frame" x="-4" y="0.0" width="383" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <view clipsSubviews="YES" contentMode="scaleToFill" id="wV6-qd-nx2">
-                                <rect key="frame" x="0.0" y="0.0" width="376" height="667"/>
+                            <view contentMode="scaleToFill" id="wV6-qd-nx2">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" id="xnJ-CG-NPm">
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PROCESSING" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="GQK-cM-R7y">
+                                        <rect key="frame" x="35" y="550" width="304" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="25"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" id="xnJ-CG-NPm">
                                         <rect key="frame" x="0.0" y="0.0" width="415" height="728"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
@@ -48,24 +55,13 @@
                                                 <rect key="frame" x="0.0" y="143" width="375" height="545"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="6lz-zm-X18">
-                                                        <rect key="frame" x="7" y="49" width="360" height="33"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Round up and we will refund the change." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HEM-Rl-q46">
+                                                        <rect key="frame" x="52" y="48" width="271" height="25"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
-                                                        <state key="normal" title="Round up and we will refund the change.">
-                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                                            <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                        </state>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="B6w-1b-Swh">
-                                                        <rect key="frame" x="28" y="16" width="319" height="44"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
-                                                        <state key="normal" title="How much would you like to spend?">
-                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                                            <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                        </state>
-                                                    </button>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                     <view contentMode="scaleToFill" id="0Rn-Nn-zSj">
                                                         <rect key="frame" x="34" y="150" width="307" height="374"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -233,11 +229,18 @@
                                                         </subviews>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     </view>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Jm4-h3-Wqz">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Jm4-h3-Wqz">
                                                         <rect key="frame" x="176" y="110" width="22" height="45"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="39"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How much would you like to spend?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KLC-xF-Lm0">
+                                                        <rect key="frame" x="35" y="25" width="304" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
@@ -254,6 +257,8 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="amountHelperText" destination="HEM-Rl-q46" id="Yl1-Dg-B7Z"/>
+                        <outlet property="amountLabel" destination="KLC-xF-Lm0" id="DPR-OP-pgL"/>
                         <outlet property="backgroundMaskView" destination="wV6-qd-nx2" id="PRV-pb-3Z4"/>
                         <outlet property="dialogView" destination="xnJ-CG-NPm" id="lAo-CC-Jqg"/>
                         <outlet property="dollarLabel" destination="Jm4-h3-Wqz" id="WUe-zZ-NAq"/>
@@ -261,12 +266,13 @@
                         <outlet property="headerMask" destination="YL5-uz-Dp9" id="tPW-nV-2my"/>
                         <outlet property="merchantHeaderImg" destination="DrV-nl-VL3" id="iN8-tl-ri0"/>
                         <outlet property="numberPadView" destination="0Rn-Nn-zSj" id="il2-ip-eqe"/>
+                        <outlet property="processingLabel" destination="GQK-cM-R7y" id="azM-eL-tX3"/>
                         <segue destination="kXW-d8-x2r" kind="modal" identifier="showQRCode" animates="NO" id="lTX-sO-Blh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="51.5" y="213.5"/>
+            <point key="canvasLocation" x="29.5" y="125.5"/>
         </scene>
         <!--Code-->
         <scene sceneID="r5T-73-tc5">

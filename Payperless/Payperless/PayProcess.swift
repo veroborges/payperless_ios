@@ -19,7 +19,11 @@ class PayProcess: UIViewController {
     @IBOutlet weak var dialogView: UIView!
     @IBOutlet weak var greenContainer: UIView!
     @IBOutlet weak var dollarLabel: UILabel!
-    @IBOutlet weak var amountLabelInit: UILabel!
+
+    @IBOutlet weak var amountLabel: UILabel!
+    @IBOutlet weak var amountHelperText: UILabel!
+    
+    @IBOutlet weak var processingLabel: UILabel!
     
     var listOFLabels = [UILabel]()
     var isDecimal = false
@@ -27,6 +31,8 @@ class PayProcess: UIViewController {
     var removedSecDec = false
     var merchantID = "1234"
     var userID = "1"
+    var amount = ""
+    var cardNumber = ""
     
     @IBAction func pressedNumber(sender: UIButton) {
         var title = sender.titleLabel?.text
@@ -55,8 +61,11 @@ class PayProcess: UIViewController {
     }
     
     @IBAction func confirmPay(sender: AnyObject) {
-        authenticateUser(processPayment)
-        
+        authenticateUser(){
+            (success) -> Void in
+                self.processPayment(success)
+        }
+
     }
     func authenticateUser(callback: Bool -> Void){
         // Get the local authentication context.
@@ -71,11 +80,14 @@ class PayProcess: UIViewController {
         if context.canEvaluatePolicy(LAPolicy.DeviceOwnerAuthenticationWithBiometrics, error: &error) {
             [context .evaluatePolicy(LAPolicy.DeviceOwnerAuthenticationWithBiometrics, localizedReason: reasonString, reply: {
                 (success: Bool, evalPolicyError: NSError?) -> Void in
-                if (success){
-                    callback(true)
-                }else{
-                    callback(false)
-                }
+                NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
+                    if (success){
+                        callback(success)
+                    }else{
+                        callback(success)
+                    }
+                })
+
                 
             })]
         }
@@ -83,22 +95,52 @@ class PayProcess: UIViewController {
     
     func processPayment(success:Bool){
         if (success){
-            var amount = ""
+            amount = ""
             for label in listOFLabels {
                 if (label.text != "$"){
                     amount += label.text!
                 }
             }
+            
+            animateProcessing()
+
             PayperlessAPI.issueStoreCard(amount, merchantID: merchantID, userID: userID) {
-                (result) -> Void in
-                var res = result
-                if (!result.isKindOfClass(NSDictionary)){
-                    NSLog("ahhh")
-                    res = ["card_number":"6050110010032766608","balance":"10.00"]
-                }
-                self.performSegueWithIdentifier("showQRCode", sender:res["card_number"])
+                (results) -> Void in
+                    self.cardNumber = results["card_number"] as String!
             }
         }
+    }
+    
+
+    func animateProcessing(){
+        for label in listOFLabels {
+            if (label.text != "$"){
+                label.removeFromSuperview()
+            }
+        }
+        
+        dollarLabel.text = "$" + amount
+        dollarLabel.frame = CGRectMake(0, 110, 323, 45)
+        amountLabel.text = "Amount"
+        amountLabel.frame = CGRectMake(0, 25, 323, 21)
+        self.processingLabel.transform = CGAffineTransformConcat(CGAffineTransformMakeScale(0.5, 0.5), CGAffineTransformMakeTranslation(0, -100))
+        self.processingLabel.alpha = 0
+        
+        springComplete(0.8, {
+            self.numberPadView.alpha = 0
+            self.numberPadView.hidden = true
+            self.amountHelperText.alpha = 0
+            self.amountHelperText.hidden = true
+            self.dialogView.frame = CGRectMake(26, 100, 323, 400)
+            self.dialogView.layer.cornerRadius = 5
+            self.processingLabel.hidden = false
+            self.processingLabel.alpha = 1
+            
+            self.dollarLabel.transform = CGAffineTransformMakeScale(2.1, 2.1)
+            self.processingLabel.transform = CGAffineTransformConcat(CGAffineTransformMakeScale(1, 1), CGAffineTransformMakeTranslation(0, 0))
+        }, { (Bool) -> Void in
+            self.performSegueWithIdentifier("showQRCode", sender:self.cardNumber)
+        })
     }
     
     func addNewLabel(title:NSString){
@@ -114,6 +156,7 @@ class PayProcess: UIViewController {
         spring(0.5, {
             self.animateNewCharacter(label)
         })
+    
     }
     
     func animateNewCharacter(label:UILabel){
@@ -187,7 +230,6 @@ class PayProcess: UIViewController {
         
         insertBlurView(backgroundMaskView, UIBlurEffectStyle.Light)
         listOFLabels.append(dollarLabel)
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
 }
