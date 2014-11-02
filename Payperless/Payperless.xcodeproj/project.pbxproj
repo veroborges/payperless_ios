@@ -11,7 +11,6 @@
 		75664BA11A055EF200C85099 /* Payperless.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 75664B9F1A055EF200C85099 /* Payperless.xcdatamodeld */; };
 		75664BA61A055EF200C85099 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75664BA41A055EF200C85099 /* Main.storyboard */; };
 		75664BA81A055EF200C85099 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75664BA71A055EF200C85099 /* Images.xcassets */; };
-		75664BAB1A055EF200C85099 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75664BA91A055EF200C85099 /* LaunchScreen.xib */; };
 		75664BB71A055EF300C85099 /* PayperlessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75664BB61A055EF300C85099 /* PayperlessTests.swift */; };
 		756CEF2A1A0567F2005B71B7 /* PayperlessAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756CEF291A0567F2005B71B7 /* PayperlessAPI.swift */; };
 		756CEF2C1A0580D4005B71B7 /* PayProcess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756CEF2B1A0580D4005B71B7 /* PayProcess.swift */; };
@@ -22,6 +21,7 @@
 		756CEF371A0584FC005B71B7 /* SpringAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756CEF321A0584FC005B71B7 /* SpringAnimation.swift */; };
 		756DF4FB1A05CFAB00CBAC10 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 756DF4FA1A05CFAB00CBAC10 /* LocalAuthentication.framework */; };
 		756DF4FD1A05D7C900CBAC10 /* QRCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756DF4FC1A05D7C900CBAC10 /* QRCode.swift */; };
+		756DF5031A064D9B00CBAC10 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 756DF5011A064D9B00CBAC10 /* LaunchScreen.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +41,6 @@
 		75664BA01A055EF200C85099 /* Payperless.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Payperless.xcdatamodel; sourceTree = "<group>"; };
 		75664BA51A055EF200C85099 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		75664BA71A055EF200C85099 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		75664BAA1A055EF200C85099 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		75664BB01A055EF200C85099 /* PayperlessTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PayperlessTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		75664BB51A055EF200C85099 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75664BB61A055EF300C85099 /* PayperlessTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayperlessTests.swift; sourceTree = "<group>"; };
@@ -54,6 +53,7 @@
 		756CEF321A0584FC005B71B7 /* SpringAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringAnimation.swift; sourceTree = "<group>"; };
 		756DF4FA1A05CFAB00CBAC10 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
 		756DF4FC1A05D7C900CBAC10 /* QRCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCode.swift; sourceTree = "<group>"; };
+		756DF5021A064D9B00CBAC10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Payperless/Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,11 +98,11 @@
 		75664B9A1A055EF200C85099 /* Payperless */ = {
 			isa = PBXGroup;
 			children = (
+				756DF5011A064D9B00CBAC10 /* LaunchScreen.xib */,
 				756DF4FC1A05D7C900CBAC10 /* QRCode.swift */,
 				75664B9D1A055EF200C85099 /* AppDelegate.swift */,
 				75664BA41A055EF200C85099 /* Main.storyboard */,
 				75664BA71A055EF200C85099 /* Images.xcassets */,
-				75664BA91A055EF200C85099 /* LaunchScreen.xib */,
 				75664B9F1A055EF200C85099 /* Payperless.xcdatamodeld */,
 				75664B9B1A055EF200C85099 /* Supporting Files */,
 				756CEF291A0567F2005B71B7 /* PayperlessAPI.swift */,
@@ -230,7 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				75664BA61A055EF200C85099 /* Main.storyboard in Resources */,
-				75664BAB1A055EF200C85099 /* LaunchScreen.xib in Resources */,
+				756DF5031A064D9B00CBAC10 /* LaunchScreen.xib in Resources */,
 				75664BA81A055EF200C85099 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,12 +289,13 @@
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		75664BA91A055EF200C85099 /* LaunchScreen.xib */ = {
+		756DF5011A064D9B00CBAC10 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				75664BAA1A055EF200C85099 /* Base */,
+				756DF5021A064D9B00CBAC10 /* Base */,
 			);
 			name = LaunchScreen.xib;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -381,6 +382,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Payperless/Info.plist;
@@ -394,6 +396,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Payperless/Info.plist;

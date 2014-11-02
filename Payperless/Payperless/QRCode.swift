@@ -10,6 +10,7 @@ import UIKit
 
 class QRCode: UIViewController {
     
+    @IBOutlet weak var confirmationView: UIView!
     @IBOutlet weak var qrCodeImage: UIImageView!
     @IBOutlet weak var dialogView: UIView!
     @IBOutlet weak var amountView: UIView!
@@ -22,6 +23,7 @@ class QRCode: UIViewController {
     var amount : String = ""
 
     var done = false
+    var M_PI = 3.14
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -83,7 +85,7 @@ class QRCode: UIViewController {
                     
                     springComplete(0.4, { () -> Void in
                         self.processingLabel.alpha = 0
-                        self.processingLabel.text = "Place the QR code in front of the reader. Slide up when done"
+                        self.processingLabel.text = "Place the QR Code in front of the reader.\nSlide up when done."
                         self.processingLabel.alpha = 1
                         },{ (success) -> Void in
                             
@@ -172,10 +174,14 @@ class QRCode: UIViewController {
                     gravity.gravityDirection = CGVectorMake(0, -10)
                     animator.addBehavior(gravity)
                     
+                    
                     delay(0.5){
+                        self.confirmationView.transform = CGAffineTransformMakeTranslation(0, -500)
+                        self.confirmationView.hidden = false
                         spring(0.5, {
                             self.processingLabel.text = "Congrats! You're transaction is complete"
                             self.processingLabel.transform = CGAffineTransformMakeTranslation(0, -500)
+                            self.confirmationView.transform = CGAffineTransformMakeTranslation(0, 50)
                         })
                     }
                     
@@ -183,5 +189,4 @@ class QRCode: UIViewController {
             }
         }
     }
-
 }
