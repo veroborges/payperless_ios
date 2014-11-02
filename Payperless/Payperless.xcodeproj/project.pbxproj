@@ -20,6 +20,7 @@
 		756CEF351A0584FC005B71B7 /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756CEF301A0584FC005B71B7 /* DesignableView.swift */; };
 		756CEF361A0584FC005B71B7 /* Misc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756CEF311A0584FC005B71B7 /* Misc.swift */; };
 		756CEF371A0584FC005B71B7 /* SpringAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756CEF321A0584FC005B71B7 /* SpringAnimation.swift */; };
+		756DF4FB1A05CFAB00CBAC10 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 756DF4FA1A05CFAB00CBAC10 /* LocalAuthentication.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		756CEF301A0584FC005B71B7 /* DesignableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
 		756CEF311A0584FC005B71B7 /* Misc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Misc.swift; sourceTree = "<group>"; };
 		756CEF321A0584FC005B71B7 /* SpringAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringAnimation.swift; sourceTree = "<group>"; };
+		756DF4FA1A05CFAB00CBAC10 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				756DF4FB1A05CFAB00CBAC10 /* LocalAuthentication.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +76,7 @@
 		75664B8F1A055EF200C85099 = {
 			isa = PBXGroup;
 			children = (
+				756DF4FA1A05CFAB00CBAC10 /* LocalAuthentication.framework */,
 				756CEF2D1A0584FC005B71B7 /* Spring */,
 				75664B9A1A055EF200C85099 /* Payperless */,
 				75664BB31A055EF200C85099 /* PayperlessTests */,

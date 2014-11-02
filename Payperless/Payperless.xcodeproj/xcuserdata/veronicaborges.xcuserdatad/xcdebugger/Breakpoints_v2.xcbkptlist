@@ -2,4 +2,124 @@
 <Bucket
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Payperless/PayProcess.swift"
+            timestampString = "436590191.131572"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "PayProcess"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Payperless.PayProcess.listOFLabels.getter : ObjectiveC.NSMutableArray"
+                  moduleName = "Payperless"
+                  urlString = "file:///Users/veronicaborges/GitHub/payperless_ios/Payperless/Payperless/PayProcess.swift"
+                  timestampString = "436579535.861953"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Payperless.PayProcess.listOFLabels.setter : ObjectiveC.NSMutableArray"
+                  moduleName = "Payperless"
+                  urlString = "file:///Users/veronicaborges/GitHub/payperless_ios/Payperless/Payperless/PayProcess.swift"
+                  timestampString = "436579535.863704"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Payperless.PayProcess.listOFLabels.materializeForSet : ObjectiveC.NSMutableArray"
+                  moduleName = "Payperless"
+                  urlString = "file:///Users/veronicaborges/GitHub/payperless_ios/Payperless/Payperless/PayProcess.swift"
+                  timestampString = "436579535.863918"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Payperless.PayProcess.init (Payperless.PayProcess.Type)(nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;ObjectiveC.NSBundle&gt;) -&gt; Payperless.PayProcess"
+                  moduleName = "Payperless"
+                  urlString = "file:///Users/veronicaborges/GitHub/payperless_ios/Payperless/Payperless/PayProcess.swift"
+                  timestampString = "436579535.864187"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "332">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Payperless.PayProcess.init (Payperless.PayProcess.Type)() -&gt; Payperless.PayProcess"
+                  moduleName = "Payperless"
+                  urlString = "file:///Users/veronicaborges/GitHub/payperless_ios/Payperless/Payperless/PayProcess.swift"
+                  timestampString = "436579535.864411"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "288">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Payperless.PayProcess.init (Payperless.PayProcess.Type)(coder : ObjectiveC.NSCoder) -&gt; Payperless.PayProcess"
+                  moduleName = "Payperless"
+                  urlString = "file:///Users/veronicaborges/GitHub/payperless_ios/Payperless/Payperless/PayProcess.swift"
+                  timestampString = "436579535.864669"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "292">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Payperless/PayProcess.swift"
+            timestampString = "436590191.131572"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
+            landmarkName = "processPayment(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

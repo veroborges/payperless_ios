@@ -7,10 +7,10 @@
 //
 
 import Foundation
+var host = "http://localhost:3000"
 
 class PayperlessAPI: NSObject {
 
-    var host = "http://localhost:3000"
     var query = String()
     
     
@@ -23,9 +23,12 @@ class PayperlessAPI: NSObject {
     # returns:
     # 	qrcode image path or cleartext number,card_id
     ****/
-    func issueStoreCard(amount:Float, merchantID:Float, userID:Int, callback:(NSDictionary) -> Void){
+    class func issueStoreCard(amount:String, merchantID:String, userID:String, callback:(NSDictionary) -> Void){
         let params = "merchant_id=\(merchantID)&amount=\(amount)&user_id=\(userID)"
-        HTTPPostJSON("/api/issue_store_card", dataString: params, callback)
+        HTTPPostJSON("/api/issue_store_card", dataString: params) {
+            (result) -> Void in
+                callback(result)
+        }
     }
 
     /*****
@@ -35,7 +38,7 @@ class PayperlessAPI: NSObject {
     # returns:
     # 	balance
     ****/
-    func checkCardBalance(cardID:String, callback:(NSDictionary) -> Void) {
+    class func checkCardBalance(cardID:String, callback:(NSDictionary) -> Void) {
         let params = "card_id=\(cardID)"
         HTTPGetJSON("/api/check_card_balance", dataString: params, callback)
         
@@ -49,7 +52,7 @@ class PayperlessAPI: NSObject {
     # returns:
     # 	array of transactions
     ****/
-    func getAllTransactions(userID:String, callback:(NSDictionary) -> Void) {
+    class func getAllTransactions(userID:String, callback:(NSDictionary) -> Void) {
         let params = "user_id=\(userID)"
         HTTPGetJSON("/api/get_all_transactions", dataString: params, callback)
     }
@@ -59,7 +62,7 @@ class PayperlessAPI: NSObject {
     
     /** HELPER FUNCTIONS FOR POST/GET ***/
     
-    func HTTPPostJSON(urlPath: String,dataString:String, callback: (NSDictionary) -> Void) {
+    class func HTTPPostJSON(urlPath: String, dataString :String, callback: (NSDictionary) -> Void) {
             var request = NSMutableURLRequest(URL: NSURL(string: "\(host)\(urlPath)")!)
             request.HTTPMethod = "POST"
             request.addValue("application/json",forHTTPHeaderField: "Content-Type")
@@ -68,13 +71,13 @@ class PayperlessAPI: NSObject {
     }
     
     
-    func HTTPGetJSON(urlPath: String, dataString:String, callback: (NSDictionary) -> Void) {
+    class func HTTPGetJSON(urlPath: String, dataString:String, callback: (NSDictionary) -> Void) {
         var request = NSMutableURLRequest(URL: NSURL(string: "\(host)\(urlPath)?\(dataString)")!)
         request.setValue("application/json", forHTTPHeaderField: "Accept")
         HTTPsendRequest(request, callback)
     }
     
-    func HTTPsendRequest(request: NSMutableURLRequest,callback: (NSDictionary) -> Void) {
+    class func HTTPsendRequest(request: NSMutableURLRequest,callback: (NSDictionary) -> Void) {
             let task = NSURLSession.sharedSession()
                 .dataTaskWithRequest(request) {
                     (data, response, error) -> Void in
