@@ -9,17 +9,18 @@
 import UIKit
 
 class QRCode: UIViewController {
-
+    
     @IBOutlet weak var qrCodeImage: UIImageView!
     
-    
+    var cardNumber : String = ""
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         
-        var qrCode = createQRForString("1234")
-        qrCodeImage.image = createNonInterpolatedUIImageFromCIImage(qrCode, scale:2*UIScreen.mainScreen().scale);
+        var qrCode = createQRForString(cardNumber)
+        qrCodeImage.image = createNonInterpolatedUIImageFromCIImage(qrCode, scale:2*UIScreen.mainScreen().scale)
     }
     
     func createQRForString(qrString : String) -> CIImage
@@ -29,7 +30,7 @@ class QRCode: UIViewController {
         
         // Create the filter
         var qrFilter = CIFilter(name: "CIQRCodeGenerator");
-        
+        NSLog(qrString)
         // Set the message content and error-correction level
         qrFilter.setValue(stringData, forKey: "inputMessage")
         qrFilter.setValue("H", forKey: "inputCorrectionLevel")

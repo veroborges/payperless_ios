@@ -27,7 +27,8 @@ class PayperlessAPI: NSObject {
         let params = "merchant_id=\(merchantID)&amount=\(amount)&user_id=\(userID)"
         HTTPPostJSON("/api/issue_store_card", dataString: params) {
             (result) -> Void in
-                callback(result)
+                //callback(result)
+            callback(["card_number":"6050110010032766608","balance":"10.00"])
         }
     }
 
@@ -40,7 +41,11 @@ class PayperlessAPI: NSObject {
     ****/
     class func checkCardBalance(cardID:String, callback:(NSDictionary) -> Void) {
         let params = "card_id=\(cardID)"
-        HTTPGetJSON("/api/check_card_balance", dataString: params, callback)
+        HTTPGetJSON("/api/check_card_balance", dataString: params) {
+            (result) -> Void in
+            //callback(result)
+            callback(["card_number":"6050110010032766608","balance":"10.00"])
+        }
         
     }
 

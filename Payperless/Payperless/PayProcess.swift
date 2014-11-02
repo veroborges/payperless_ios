@@ -87,7 +87,7 @@ class PayProcess: UIViewController {
             }
             PayperlessAPI.issueStoreCard(amount, merchantID: merchantID, userID: userID) {
                 (result) -> Void in
-                self.performSegueWithIdentifier("showQRCode", sender: self)
+                self.performSegueWithIdentifier("showQRCode", sender:result["card_number"])
             }
         }
     }
@@ -163,6 +163,13 @@ class PayProcess: UIViewController {
             spring(0.5, {
                 self.animateBack(false)
             })
+        }
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "showQRCode") {
+            var qrVC = segue.destinationViewController as QRCode;
+            qrVC.cardNumber = sender as String!
         }
     }
     
