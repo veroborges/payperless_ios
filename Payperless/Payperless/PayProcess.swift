@@ -87,7 +87,7 @@ class PayProcess: UIViewController {
             }
             PayperlessAPI.issueStoreCard(amount, merchantID: merchantID, userID: userID) {
                 (result) -> Void in
-                                
+                self.performSegueWithIdentifier("showQRCode", sender: self)
             }
         }
     }

@@ -216,26 +216,35 @@
                         <outlet property="dollarLabel" destination="Jm4-h3-Wqz" id="WUe-zZ-NAq"/>
                         <outlet property="merchantHeaderImg" destination="DrV-nl-VL3" id="iN8-tl-ri0"/>
                         <outlet property="numberPadView" destination="0Rn-Nn-zSj" id="il2-ip-eqe"/>
-                        <segue destination="kXW-d8-x2r" kind="modal" animates="NO" id="lTX-sO-Blh"/>
+                        <segue destination="kXW-d8-x2r" kind="modal" identifier="showQRCode" animates="NO" id="lTX-sO-Blh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="51.5" y="213.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Code-->
         <scene sceneID="r5T-73-tc5">
             <objects>
-                <viewController id="kXW-d8-x2r" sceneMemberID="viewController">
+                <viewController id="kXW-d8-x2r" customClass="QRCode" customModule="Payperless" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="j0A-VE-aah">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="Nmu-At-lZl">
+                                <rect key="frame" x="113" y="182" width="215" height="215"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="qrCodeImage" destination="Nmu-At-lZl" id="vha-KQ-lZO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ENe-zR-OgK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="562" y="245"/>
+            <point key="canvasLocation" x="561.5" y="244.5"/>
         </scene>
     </scenes>
     <resources>

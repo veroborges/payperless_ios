@@ -21,6 +21,7 @@
 		756CEF361A0584FC005B71B7 /* Misc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756CEF311A0584FC005B71B7 /* Misc.swift */; };
 		756CEF371A0584FC005B71B7 /* SpringAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756CEF321A0584FC005B71B7 /* SpringAnimation.swift */; };
 		756DF4FB1A05CFAB00CBAC10 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 756DF4FA1A05CFAB00CBAC10 /* LocalAuthentication.framework */; };
+		756DF4FD1A05D7C900CBAC10 /* QRCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756DF4FC1A05D7C900CBAC10 /* QRCode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		756CEF311A0584FC005B71B7 /* Misc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Misc.swift; sourceTree = "<group>"; };
 		756CEF321A0584FC005B71B7 /* SpringAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringAnimation.swift; sourceTree = "<group>"; };
 		756DF4FA1A05CFAB00CBAC10 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
+		756DF4FC1A05D7C900CBAC10 /* QRCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 		75664B9A1A055EF200C85099 /* Payperless */ = {
 			isa = PBXGroup;
 			children = (
+				756DF4FC1A05D7C900CBAC10 /* QRCode.swift */,
 				75664B9D1A055EF200C85099 /* AppDelegate.swift */,
 				75664BA41A055EF200C85099 /* Main.storyboard */,
 				75664BA71A055EF200C85099 /* Images.xcassets */,
@@ -255,6 +258,7 @@
 				756CEF371A0584FC005B71B7 /* SpringAnimation.swift in Sources */,
 				75664B9E1A055EF200C85099 /* AppDelegate.swift in Sources */,
 				75664BA11A055EF200C85099 /* Payperless.xcdatamodeld in Sources */,
+				756DF4FD1A05D7C900CBAC10 /* QRCode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
