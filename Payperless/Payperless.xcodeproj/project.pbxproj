@@ -22,6 +22,11 @@
 		756DF4FB1A05CFAB00CBAC10 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 756DF4FA1A05CFAB00CBAC10 /* LocalAuthentication.framework */; };
 		756DF4FD1A05D7C900CBAC10 /* QRCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756DF4FC1A05D7C900CBAC10 /* QRCode.swift */; };
 		756DF5031A064D9B00CBAC10 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 756DF5011A064D9B00CBAC10 /* LaunchScreen.xib */; };
+		756DF50B1A0650AB00CBAC10 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 756DF50A1A0650AB00CBAC10 /* NotificationCenter.framework */; };
+		756DF5101A0650AB00CBAC10 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756DF50F1A0650AB00CBAC10 /* TodayViewController.swift */; };
+		756DF5121A0650AB00CBAC10 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 756DF5111A0650AB00CBAC10 /* MainInterface.storyboard */; };
+		756DF5151A0650AB00CBAC10 /* Payperless Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 756DF5081A0650AB00CBAC10 /* Payperless Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		756DF51B1A06562A00CBAC10 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75664BA71A055EF200C85099 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,7 +37,28 @@
 			remoteGlobalIDString = 75664B971A055EF200C85099;
 			remoteInfo = Payperless;
 		};
+		756DF5131A0650AB00CBAC10 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 75664B901A055EF200C85099 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 756DF5071A0650AB00CBAC10;
+			remoteInfo = "Payperless Widget";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		756DF5191A0650AB00CBAC10 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				756DF5151A0650AB00CBAC10 /* Payperless Widget.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		75664B981A055EF200C85099 /* Payperless.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Payperless.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -54,6 +80,12 @@
 		756DF4FA1A05CFAB00CBAC10 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
 		756DF4FC1A05D7C900CBAC10 /* QRCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCode.swift; sourceTree = "<group>"; };
 		756DF5021A064D9B00CBAC10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Payperless/Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		756DF5081A0650AB00CBAC10 /* Payperless Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Payperless Widget.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		756DF50A1A0650AB00CBAC10 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		756DF50E1A0650AB00CBAC10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		756DF50F1A0650AB00CBAC10 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		756DF5111A0650AB00CBAC10 /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
+		756DF51A1A06555500CBAC10 /* Payperless.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Payperless.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +104,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		756DF5051A0650AB00CBAC10 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				756DF50B1A0650AB00CBAC10 /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -82,6 +122,8 @@
 				756CEF2D1A0584FC005B71B7 /* Spring */,
 				75664B9A1A055EF200C85099 /* Payperless */,
 				75664BB31A055EF200C85099 /* PayperlessTests */,
+				756DF50C1A0650AB00CBAC10 /* Payperless Widget */,
+				756DF5091A0650AB00CBAC10 /* Frameworks */,
 				75664B991A055EF200C85099 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -91,6 +133,7 @@
 			children = (
 				75664B981A055EF200C85099 /* Payperless.app */,
 				75664BB01A055EF200C85099 /* PayperlessTests.xctest */,
+				756DF5081A0650AB00CBAC10 /* Payperless Widget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -98,6 +141,7 @@
 		75664B9A1A055EF200C85099 /* Payperless */ = {
 			isa = PBXGroup;
 			children = (
+				756DF51A1A06555500CBAC10 /* Payperless.entitlements */,
 				756DF5011A064D9B00CBAC10 /* LaunchScreen.xib */,
 				756DF4FC1A05D7C900CBAC10 /* QRCode.swift */,
 				75664B9D1A055EF200C85099 /* AppDelegate.swift */,
@@ -148,6 +192,32 @@
 			path = Spring;
 			sourceTree = "<group>";
 		};
+		756DF5091A0650AB00CBAC10 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				756DF50A1A0650AB00CBAC10 /* NotificationCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		756DF50C1A0650AB00CBAC10 /* Payperless Widget */ = {
+			isa = PBXGroup;
+			children = (
+				756DF50F1A0650AB00CBAC10 /* TodayViewController.swift */,
+				756DF5111A0650AB00CBAC10 /* MainInterface.storyboard */,
+				756DF50D1A0650AB00CBAC10 /* Supporting Files */,
+			);
+			path = "Payperless Widget";
+			sourceTree = "<group>";
+		};
+		756DF50D1A0650AB00CBAC10 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				756DF50E1A0650AB00CBAC10 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -158,10 +228,12 @@
 				75664B941A055EF200C85099 /* Sources */,
 				75664B951A055EF200C85099 /* Frameworks */,
 				75664B961A055EF200C85099 /* Resources */,
+				756DF5191A0650AB00CBAC10 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				756DF5141A0650AB00CBAC10 /* PBXTargetDependency */,
 			);
 			name = Payperless;
 			productName = Payperless;
@@ -186,6 +258,23 @@
 			productReference = 75664BB01A055EF200C85099 /* PayperlessTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		756DF5071A0650AB00CBAC10 /* Payperless Widget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 756DF5161A0650AB00CBAC10 /* Build configuration list for PBXNativeTarget "Payperless Widget" */;
+			buildPhases = (
+				756DF5041A0650AB00CBAC10 /* Sources */,
+				756DF5051A0650AB00CBAC10 /* Frameworks */,
+				756DF5061A0650AB00CBAC10 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Payperless Widget";
+			productName = "Payperless Widget";
+			productReference = 756DF5081A0650AB00CBAC10 /* Payperless Widget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -198,10 +287,19 @@
 					75664B971A055EF200C85099 = {
 						CreatedOnToolsVersion = 6.1;
 						DevelopmentTeam = 5S55D8N6HT;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					75664BAF1A055EF200C85099 = {
 						CreatedOnToolsVersion = 6.1;
 						TestTargetID = 75664B971A055EF200C85099;
+					};
+					756DF5071A0650AB00CBAC10 = {
+						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = 5S55D8N6HT;
 					};
 				};
 			};
@@ -220,6 +318,7 @@
 			targets = (
 				75664B971A055EF200C85099 /* Payperless */,
 				75664BAF1A055EF200C85099 /* PayperlessTests */,
+				756DF5071A0650AB00CBAC10 /* Payperless Widget */,
 			);
 		};
 /* End PBXProject section */
@@ -239,6 +338,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		756DF5061A0650AB00CBAC10 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				756DF5121A0650AB00CBAC10 /* MainInterface.storyboard in Resources */,
+				756DF51B1A06562A00CBAC10 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +378,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		756DF5041A0650AB00CBAC10 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				756DF5101A0650AB00CBAC10 /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -277,6 +393,11 @@
 			isa = PBXTargetDependency;
 			target = 75664B971A055EF200C85099 /* Payperless */;
 			targetProxy = 75664BB11A055EF200C85099 /* PBXContainerItemProxy */;
+		};
+		756DF5141A0650AB00CBAC10 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 756DF5071A0650AB00CBAC10 /* Payperless Widget */;
+			targetProxy = 756DF5131A0650AB00CBAC10 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -383,8 +504,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = Payperless/Payperless.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Payperless/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -397,8 +520,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = Payperless/Payperless.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Payperless/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -440,6 +565,34 @@
 			};
 			name = Release;
 		};
+		756DF5171A0650AB00CBAC10 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Payperless Widget/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		756DF5181A0650AB00CBAC10 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "Payperless Widget/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -469,6 +622,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		756DF5161A0650AB00CBAC10 /* Build configuration list for PBXNativeTarget "Payperless Widget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				756DF5171A0650AB00CBAC10 /* Debug */,
+				756DF5181A0650AB00CBAC10 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 

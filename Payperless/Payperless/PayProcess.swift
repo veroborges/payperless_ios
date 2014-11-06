@@ -37,7 +37,15 @@ class PayProcess: UIViewController {
     
     @IBAction func pressedNumber(sender: UIButton) {
         var title = sender.titleLabel?.text
+        if (listOFLabels.count == 2 && listOFLabels[1].text == "0"){
+            animateBack(true)
+        }
+        
         if (isDecimal){
+            if (title == "."){
+                return
+            }
+            
             var firstDec = listOFLabels[listOFLabels.count-2].text
             animateBack(true)
             
@@ -51,11 +59,15 @@ class PayProcess: UIViewController {
                 addNewLabel("0")
             }
         }else{
+            if (isDecimal && title == "."){
+                return
+            }
+            
             addNewLabel(title!)
             if (title == "."){
                 isDecimal = true
-                addNewLabel("0");
-                addNewLabel("0");
+                addNewLabel("0")
+                addNewLabel("0")
             }
         }
 
@@ -183,7 +195,7 @@ class PayProcess: UIViewController {
     func animateBack(dontCheck : Bool){
         var label = listOFLabels.last!
         label.alpha = 0
-        
+        var multiplier = 1.0
         if (!dontCheck){
             if (label == "."){
                 isDecimal = false
@@ -191,19 +203,23 @@ class PayProcess: UIViewController {
             }
             
             if (isDecimal && !alteredFirstDec && listOFLabels[listOFLabels.count-2].text == "0"  && listOFLabels[listOFLabels.count-1].text == "0"){
-                  listOFLabels.removeLast()
-                  listOFLabels.removeLast()
-                
+                label = listOFLabels.removeLast()
+                label.removeFromSuperview()
+                label = listOFLabels.removeLast()
+                label.removeFromSuperview()
                 isDecimal = false
                 alteredFirstDec = false
+                multiplier += 2.0
             }
         }
         
-        listOFLabels.removeLast()
-
+        label = listOFLabels.removeLast()
+        label.removeFromSuperview()
+        
         for l in listOFLabels {
             var newFrame = l.frame
-            newFrame.origin.x = l.frame.origin.x + newFrame.size.width/2
+            var width = newFrame.size.width * CGFloat(multiplier)
+            newFrame.origin.x = l.frame.origin.x + width/2
             l.frame = newFrame
         }
         
@@ -241,6 +257,8 @@ class PayProcess: UIViewController {
         
         insertBlurView(backgroundMaskView, UIBlurEffectStyle.Dark)
         listOFLabels.append(dollarLabel)
+        addNewLabel("0")
+
     }
 
 }

@@ -167,7 +167,7 @@ class QRCode: UIViewController {
                 animator.addBehavior(snapBehavior)
                 
                 let translation = sender.translationInView(view)
-                if translation.y < 75 {
+                if translation.y < 20 {
                     animator.removeAllBehaviors()
                     
                     var gravity = UIGravityBehavior(items: [dialogView])

@@ -43,8 +43,8 @@ class PayperlessAPI: NSObject {
         let params = "card_id=\(cardID)"
         HTTPGetJSON("/check_card_balance", dataString: params) {
             (result) -> Void in
-            //callback(result)
-            callback(["card_number":"6050110010032766608","balance":"10.00"])
+            callback(result)
+            //callback(["card_number":"6050110010032766608","balance":"10.00"])
         }
         
     }
